@@ -9,6 +9,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero-profile {
+      display: flex; gap: 2.5rem; align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .hero-photo {
+      width: 180px; height: 180px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--border);
+      flex-shrink: 0;
+      opacity: 0; transform: translateY(12px);
+      animation: fadeUp 0.6s ease forwards 0.15s;
+    }
+    .hero-text { flex: 1; min-width: 280px; }
+    .affiliation {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-top: 1.25rem; padding: 0.75rem 1rem;
+      background: var(--sand); border-radius: 8px;
+      max-width: fit-content;
+      opacity: 0; transform: translateY(12px);
+      animation: fadeUp 0.6s ease forwards 0.65s;
+    }
+    .affiliation img { height: 32px; width: auto; }
+    .affiliation span {
+      font-family: var(--display); font-size: 0.85rem;
+      font-weight: 500; color: var(--slate);
+    }
+    @media (max-width: 600px) {
+      .hero-profile { flex-direction: column; align-items: center; text-align: center; }
+      .hero-photo { width: 140px; height: 140px; }
+      .hero-bio, .hero-meta { max-width: 100%; }
+      .affiliation { margin-left: auto; margin-right: auto; }
+    }
+  </style>
 </head>
 <body>
 
@@ -19,15 +53,22 @@
       <a href="/research/">Research</a>
       <a href="/publications/">Publications</a>
       <a href="/code/">Code</a>
+      <a href="/files/Babatunde%20Rotimi%20Resume_.pdf">CV</a>
       <a href="/contact/">Contact</a>
     </div>
   </nav>
 
   <header class="hero">
-    <p class="hero-eyebrow">Geophysics · Inverse Problems · Seismology</p>
-    <h1>Welcome — you have<br>gradient descended into<br>my local minima.</h1>
+    <div class="hero-profile">
+      <img src="/img/Isaac.jpg" alt="Isaac Rotimi" class="hero-photo">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Geophysics · Inverse Problems · Seismology</p>
+        <h1>Welcome — you have<br>gradient descended into<br>my local minima.</h1>
+      </div>
+    </div>
+
     <p class="hero-bio">
-      I'm <strong>Isaac Rotimi</strong>, a third-year PhD student in the
+      I'm <strong>Babatunde Isaac Rotimi</strong>, a third-year PhD student in the
       <a href="https://jbrussell.github.io/">Russell Seismology Group</a>
       at <a href="https://thecollege.syr.edu/earth-sciences-department/">Syracuse University</a>.
       My research lives at the intersection of geophysics and computational science —
@@ -36,14 +77,21 @@
       better resolution and honest uncertainty.
     </p>
 
+    <div class="affiliation">
+      <img src="/img/SU_logo_v1.5.png" alt="Syracuse University">
+      <span>Dept. of Earth &amp; Environmental Sciences</span>
+    </div>
+
     <div class="hero-meta">
-      <span>Syracuse University</span>
       <span>PhD Student, 2023–Present</span>
       <a href="https://orcid.org/0000-0003-2184-3077">ORCID</a>
       <a href="https://github.com/Birotimi1">GitHub</a>
+      <a href="https://www.linkedin.com/in/rotimi-babatunde-isaac-463b0b21a">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=LRlE1F8AAAAJ">Google Scholar</a>
     </div>
     <div class="hero-cta">
       <a href="/research/" class="btn btn-primary">View my research</a>
+      <a href="/files/Babatunde%20Rotimi%20Resume_.pdf" class="btn btn-ghost">Download CV</a>
       <a href="/contact/" class="btn btn-ghost">Get in touch</a>
     </div>
   </header>
@@ -224,6 +272,7 @@
         <a href="mailto:rotimibabatundeisaac@gmail.com" class="contact-link">Email</a>
         <a href="https://github.com/Birotimi1" class="contact-link">GitHub</a>
         <a href="https://orcid.org/0000-0003-2184-3077" class="contact-link">ORCID</a>
+        <a href="https://www.linkedin.com/in/rotimi-babatunde-isaac-463b0b21a" class="contact-link">LinkedIn</a>
         <a href="https://jbrussell.github.io/" class="contact-link">Research Group</a>
       </div>
     </div>
