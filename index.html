@@ -4,158 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Babatunde Isaac Rotimi — Geophysics & Seismology</title>
-  <meta name="description" content="Babatunde Isaac Rotimi — PhD Student in Geophysics & Seismology at Syracuse University. Inverse problems, uncertainty quantification, ambient noise tomography, physics-informed learning.">
+  <meta name="description" content="Babatunde Isaac Rotimi — PhD Student in Geophysics at Syracuse University.">
   <meta property="og:title" content="Babatunde Isaac Rotimi — Geophysicist">
-  <meta property="og:description" content="PhD Student at Syracuse University. Inverse problems, UQ, ambient noise tomography.">
   <meta property="og:image" content="https://birotimi1.github.io/img/Isaac.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
   <nav>
     <div class="nav-left">
-      <a href="/" class="nav-logo">Babatunde Isaac Rotimi<span>.</span></a>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☀️</button>
+      <a href="/" class="nav-logo">B.I. Rotimi<span>.</span></a>
+      <button id="theme-btn" onclick="toggleTheme()">dark</button>
     </div>
     <div class="nav-links">
       <a href="/" class="active">Home</a>
       <a href="/research/">Research</a>
       <a href="/publications/">Publications</a>
       <a href="/code/">Code</a>
+      <a href="/teaching/">Teaching</a>
       <a href="/files/Babatunde%20Rotimi%20Resume_.pdf">CV</a>
-      <a href="/contact/">Contact</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="hero-profile">
-      <img src="/img/Isaac.jpg" alt="Babatunde Isaac Rotimi" class="hero-photo">
-      <div class="hero-text">
-        <p class="hero-eyebrow">Geophysics · Inverse Problems · Seismology</p>
-        <h1>Welcome — you have<br>gradient descended into<br>my local minima.</h1>
+    <div class="hero-intro">
+      <div class="hero-content">
+        <h1>Babatunde Isaac Rotimi</h1>
+        <p class="hero-tagline">Welcome — you have gradient descended into my local minima.</p>
+
+        <p class="hero-bio">
+          I'm a third-year PhD student in the
+          <a href="https://jbrussell.github.io/">Russell Seismology Group</a>
+          at <a href="https://thecollege.syr.edu/earth-sciences-department/">Syracuse University</a>,
+          advised by <a href="https://jbrussell.github.io/">Dr. Joshua Russell</a>.
+          My research focuses on developing novel methods for subsurface imaging that fuse
+          multiple geophysical data types with physics-informed machine learning. I'm also
+          a Research Affiliate at <a href="https://mineralx.stanford.edu/">Mineral-X, Stanford University</a>
+          working with Dr. Peng Li on uncertainty quantification via physics-informed neural networks.
+        </p>
+        <p class="hero-bio">
+          Before Syracuse, I completed my B.Sc. in Applied Geophysics at Adekunle Ajasin University
+          in Nigeria (Best Graduating Student) and interned at Danvic Petroleum in Lagos. I'm a Fellow
+          of the Geological Society of London and serve as a journal referee for SEG, Earth &amp; Space Science,
+          and G-Cubed.
+        </p>
+
+        <div class="hero-links">
+          <span>Birotimi [at] syr [dot] edu</span>
+          <a href="https://github.com/Birotimi1">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=LRlE1F8AAAAJ">Scholar</a>
+          <a href="https://orcid.org/0000-0003-2184-3077">ORCID</a>
+          <a href="https://www.linkedin.com/in/rotimi-babatunde-isaac-463b0b21a">LinkedIn</a>
+        </div>
+
+        <div class="hero-btns">
+          <a href="/research/" class="btn btn-primary">Research</a>
+          <a href="/files/Babatunde%20Rotimi%20Resume_.pdf" class="btn btn-ghost">CV</a>
+          <a href="#contact" class="btn btn-ghost">Reach out</a>
+        </div>
+      </div>
+
+      <div class="hero-sidebar">
+        <img src="/img/Isaac.jpg" alt="Babatunde Isaac Rotimi">
+        <p>PhD Student<br>Syracuse University</p>
       </div>
     </div>
-    <p class="hero-bio">
-      I'm <strong>Babatunde Isaac Rotimi</strong>, a third-year PhD student in the
-      <a href="https://jbrussell.github.io/">Russell Seismology Group</a>
-      at <a href="https://thecollege.syr.edu/earth-sciences-department/">Syracuse University</a>.
-      My research lives at the intersection of geophysics and computational science —
-      I develop methods that fuse multiple geophysical data types and leverage
-      physics-informed machine learning to image Earth's subsurface with
-      better resolution and honest uncertainty.
-    </p>
-    <div class="affiliation">
-      <img src="/img/SU_logo_v1.5.png" alt="Syracuse University">
-      <span>Dept. of Earth &amp; Environmental Sciences</span>
-    </div>
-    <div class="hero-meta">
-      <span>PhD Student, 2023–Present</span>
-      <a href="https://orcid.org/0000-0003-2184-3077">ORCID</a>
-      <a href="https://github.com/Birotimi1">GitHub</a>
-      <a href="https://scholar.google.com/citations?user=LRlE1F8AAAAJ">Scholar</a>
-      <a href="https://www.linkedin.com/in/rotimi-babatunde-isaac-463b0b21a">LinkedIn</a>
-    </div>
-    <div class="hero-cta">
-      <a href="/research/" class="btn btn-primary">View my research</a>
-      <a href="/files/Babatunde%20Rotimi%20Resume_.pdf" class="btn btn-ghost">Download CV</a>
-      <a href="#contact" class="btn btn-ghost">Reach out</a>
+
+    <div class="focus-strip reveal">
+      <p><strong>Current focus:</strong> Inverse problems, uncertainty quantification, multimodal data fusion for subsurface imaging, ambient noise tomography, and physics-informed hybrid learning.</p>
+      <div class="focus-tags">
+        <span class="tag">Bayesian Inversion</span>
+        <span class="tag">UQ</span>
+        <span class="tag">PINNs</span>
+        <span class="tag">HVSR</span>
+        <span class="tag">Surface Waves</span>
+        <span class="tag">DAS/Nodal</span>
+      </div>
     </div>
   </header>
 
   <!-- News -->
   <section id="news">
     <p class="section-label reveal">News</p>
-    <h2 class="section-title reveal">Latest updates</h2>
+    <h2 class="section-title reveal">Latest</h2>
     <ul class="news-list">
-      <li class="news-item reveal"><span class="news-date">Apr 2026</span><span class="news-text">🎉 Awarded NSF ACCESS compute credits for <em>Novel Hierarchical Bayesian Engine for Multi-Scale Shear Wave Velocity Inversion</em> (<a href="https://www.xras.org/public/requests/269189-ACCESS-EES260065">ACCESS-EES260065</a>)</span></li>
-      <li class="news-item reveal"><span class="news-date">Apr 2026</span><span class="news-text">🎤 Oral presentation at the <strong>Seismological Society of America Meeting</strong>, Pasadena, CA — Hierarchical Bayesian inversion engine for multi-scale crustal imaging</span></li>
-      <li class="news-item reveal"><span class="news-date">Sep 2025</span><span class="news-text">🔬 Joined <strong>Mineral-X at Stanford University</strong> as a Research Affiliate — working on uncertainty quantification via physics-informed neural networks</span></li>
-      <li class="news-item reveal"><span class="news-date">Dec 2025</span><span class="news-text">🎤 Oral presentation at <strong>AGU Fall Meeting</strong>, New Orleans — Shear-wave velocity characterization of Atlantic Coastal Plain sediments</span></li>
-      <li class="news-item reveal"><span class="news-date">Jan 2025</span><span class="news-text">🎉 Awarded <strong>NSF ACCESS</strong> 1.5M compute credits for Atlantic Coastal Plain research (<a href="https://www.xras.org/public/requests/190695-ACCESS-EES250003">ACCESS-EES250003</a>)</span></li>
-      <li class="news-item reveal"><span class="news-date">2025</span><span class="news-text">🌋 Broadband seismometer deployment at <strong>LIGO Hanford</strong>, Richland, WA</span></li>
-      <li class="news-item reveal"><span class="news-date">Dec 2024</span><span class="news-text">📋 Poster at <strong>AGU Fall Meeting</strong>, Washington, D.C. — Combining HVSR, Rayleigh wave ellipticity, and multimode phase velocities</span></li>
-      <li class="news-item reveal"><span class="news-date">2024</span><span class="news-text">🎓 EarthScope instrument deployment training at <strong>New Mexico Tech</strong>, Socorro, NM</span></li>
+      <li class="news-item reveal"><span class="news-date">Apr 2026</span><span class="news-text">Awarded NSF ACCESS compute credits — <em>Hierarchical Bayesian Engine for Multi-Scale Vs Inversion</em> (<a href="https://www.xras.org/public/requests/269189-ACCESS-EES260065">EES260065</a>)</span></li>
+      <li class="news-item reveal"><span class="news-date">Apr 2026</span><span class="news-text">Oral presentation at <strong>SSA Meeting</strong>, Pasadena — Hierarchical Bayesian joint inversion</span></li>
+      <li class="news-item reveal"><span class="news-date">Sep 2025</span><span class="news-text">Joined <strong>Mineral-X at Stanford</strong> as Research Affiliate with Dr. Peng Li</span></li>
+      <li class="news-item reveal"><span class="news-date">Dec 2025</span><span class="news-text">Talk at <strong>AGU Fall Meeting</strong>, New Orleans — HVSR inversion and ambient noise dispersion</span></li>
+      <li class="news-item reveal"><span class="news-date">Jan 2025</span><span class="news-text">Awarded <strong>NSF ACCESS</strong> 1.5M compute credits (<a href="https://www.xras.org/public/requests/190695-ACCESS-EES250003">EES250003</a>)</span></li>
+      <li class="news-item reveal"><span class="news-date">2025</span><span class="news-text">Broadband seismometer deployment at <strong>LIGO Hanford</strong>, WA</span></li>
+      <li class="news-item reveal"><span class="news-date">Dec 2024</span><span class="news-text">Poster at <strong>AGU Fall Meeting</strong>, Washington, D.C.</span></li>
+      <li class="news-item reveal"><span class="news-date">2024</span><span class="news-text">EarthScope instrument training at <strong>New Mexico Tech</strong></span></li>
     </ul>
-  </section>
-
-  <!-- Current Work -->
-  <section id="current">
-    <p class="section-label reveal">Current Focus</p>
-    <h2 class="section-title reveal">What I'm working on now</h2>
-    <p class="section-desc reveal">Inverse problems · uncertainty quantification · multimodal data fusion · ambient noise tomography · physics-informed hybrid learning</p>
-    <div class="card-grid">
-      <div class="card reveal">
-        <p class="card-label">PhD Research</p>
-        <h3>Hierarchical Bayesian Inversion Engine</h3>
-        <p>Developing a novel hierarchical geophysical inversion framework that jointly inverts HVSR, Rayleigh wave ellipticity, and multimode surface-wave phase velocities for multi-scale crustal imaging — from soft sediments of the Atlantic Coastal Plain down through the lower Appalachians.</p>
-        <div class="card-tags"><span class="tag">Inverse Problems</span><span class="tag">Bayesian Methods</span><span class="tag">Multimodal Fusion</span><span class="tag">HVSR</span></div>
-      </div>
-      <div class="card reveal">
-        <p class="card-label">Stanford · Mineral-X</p>
-        <h3>Physics-Informed Neural Networks for Subsurface Imaging</h3>
-        <p>Research affiliate with Mineral-X at Stanford University under Dr. Peng Li, working on uncertainty quantification in subsurface imaging via physics-informed neural networks coupled with variational inference.</p>
-        <div class="card-tags"><span class="tag">PINNs</span><span class="tag">Uncertainty Quantification</span><span class="tag">Variational Inference</span><span class="tag">PyTorch</span></div>
-      </div>
-      <div class="card reveal">
-        <p class="card-label">Ongoing</p>
-        <h3>Ambient Noise Tomography & Site Characterization</h3>
-        <p>Characterizing near-surface shear-wave velocity structure of sedimentary basins to understand basin architectures related to continental breakup in the southeastern US. Also contributing to ground motion modeling and shallow imaging via DAS/nodal arrays.</p>
-        <div class="card-tags"><span class="tag">Ambient Noise</span><span class="tag">Surface Waves</span><span class="tag">Site Characterization</span><span class="tag">DAS/Nodal</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Background -->
-  <section id="background">
-    <p class="section-label reveal">Background</p>
-    <h2 class="section-title reveal">Where I've been</h2>
-    <div class="reveal" style="max-width:640px;">
-      <p style="margin-bottom:1rem;">Before Syracuse, I earned my B.Sc. in Applied Geophysics from Adekunle Ajasin University in Nigeria (Best Graduating Student), where my thesis focused on seismic interpretation of 2D lines from deepwater Niger Delta. I then worked as a subsurface G&amp;G intern at Danvic Petroleum in Lagos.</p>
-      <p style="margin-bottom:1rem;">At Syracuse, I've worked on 3D seismic interpretation of the Rockall Trough under Dr. Christopher Scholz, and now develop hierarchical inversion methods with Dr. Joshua Russell. I've completed field training with EarthScope at New Mexico Tech and broadband seismometer deployment at LIGO Hanford.</p>
-      <p>I'm a Fellow of the Geological Society of London and a member of AGU, SEG, AAPG, and NAPE. I serve as a journal referee for SEG, Earth &amp; Space Science, and G-Cubed.</p>
-    </div>
-    <div class="skills-grid reveal">
-      <div class="skill-group"><h4>Methods</h4><p>Bayesian inversion, ambient noise HVSR, surface-wave tomography, seismic interpretation, DAS/nodal arrays</p></div>
-      <div class="skill-group"><h4>Languages & Tools</h4><p>Python, MATLAB, R, PyTorch, Scikit-Learn, ObsPy, OpendTect, GMT, Git, HPC</p></div>
-      <div class="skill-group"><h4>Frameworks</h4><p>Pandas, NumPy, GeoPandas, Matplotlib, Jupyter, PyCharm, VS Code</p></div>
-      <div class="skill-group"><h4>Focus Areas</h4><p>Inverse problems, uncertainty quantification, physics-informed ML, multimodal data fusion</p></div>
-    </div>
-  </section>
-
-  <!-- Teaching -->
-  <section id="teaching">
-    <p class="section-label reveal">Teaching</p>
-    <h2 class="section-title reveal">Teaching</h2>
-    <div class="reveal" style="max-width:640px;">
-      <p style="margin-bottom:1rem;">
-        I genuinely enjoy teaching and helping students discover the Earth sciences.
-        During my PhD at Syracuse, I've had the opportunity to serve as an instructor
-        for undergraduate lab and recitation sections — getting students hands-on with
-        the fundamentals of how our planet works.
-      </p>
-      <p style="margin-bottom:1.25rem;">I've TA'd for the following courses:</p>
-    </div>
-    <div class="card-grid reveal" style="max-width:600px;">
-      <div class="card">
-        <p class="card-label">EAR 104 · Lab Instructor</p>
-        <h3>Earth Science Laboratory</h3>
-        <p>Labs covering Earth's interior, mineralogy, rock types, volcanoes and earthquakes, the geologic time scale, and radiometric dating.</p>
-      </div>
-      <div class="card">
-        <p class="card-label">EAR 105 · Recitation Instructor</p>
-        <h3>Earth Science Recitation</h3>
-        <p>Guided Learning Exploration and Geotours worksheet assignments — helping students connect lecture concepts to real-world geological features.</p>
-      </div>
-    </div>
-    <div class="reveal" style="max-width:640px; margin-top:1.25rem;">
-      <p style="color: var(--slate); font-size:.93rem;">
-        I'm always open to new opportunities to teach, mentor, and learn from others.
-        If you're looking for a guest speaker on geophysical imaging, inverse problems,
-        or computational methods in the Earth sciences — <a href="#contact">reach out</a>!
-      </p>
-    </div>
   </section>
 
   <!-- Selected Publications -->
@@ -163,105 +108,83 @@
     <p class="section-label reveal">Publications</p>
     <h2 class="section-title reveal">Selected work</h2>
     <ul class="pub-list">
-      <li class="pub-item reveal">
-        <p class="pub-year">2026</p>
-        <p class="pub-title">Polymer Photocatalysts for Green Energy and Environmental Remediation: Recent Progress, Challenges, and Future Directions</p>
-        <p class="pub-authors">Sikiru, S., Busari, Y.O., Olutoki, J.O., Kumar, N., Giri, J., <strong>Rotimi, B.I.</strong>, Kanan, M.</p>
-        <p class="pub-journal">Results in Engineering, 108976</p>
-      </li>
-      <li class="pub-item reveal">
-        <p class="pub-year">2026 · Preprint</p>
-        <p class="pub-title">Shear-Wave Velocity Characterization of the Atlantic Coastal Plain Sediments via HVSR Inversion and Ambient Noise Dispersion</p>
-        <p class="pub-authors"><strong>Rotimi, B.I.</strong>, García-Jerez, A., Russell, J.B.</p>
-        <p class="pub-journal">ESS Open Archive</p>
-      </li>
-      <li class="pub-item reveal">
-        <p class="pub-year">In Prep</p>
-        <p class="pub-title">Hierarchical Bayesian Engine for Joint Inversion of HVSR and Surface Wave Data for Multi-scale Crustal Imaging</p>
-        <p class="pub-authors"><strong>Rotimi, B.I.</strong>, Russell, J.B., García-Jerez, A., Pratt, T., Fischer, K., Lin, F., Eilon, Z.</p>
-        <p class="pub-journal">Journal of Geophysical Research (in prep)</p>
-      </li>
+      <li class="pub-item reveal"><p class="pub-year">2026</p><p class="pub-title">Polymer Photocatalysts for Green Energy and Environmental Remediation</p><p class="pub-authors">Sikiru, S., et al., <strong>Rotimi, B.I.</strong>, Kanan, M.</p><p class="pub-journal">Results in Engineering, 108976</p></li>
+      <li class="pub-item reveal"><p class="pub-year">2026 · Preprint</p><p class="pub-title">Shear-Wave Velocity Characterization of the Atlantic Coastal Plain Sediments via HVSR Inversion and Ambient Noise Dispersion</p><p class="pub-authors"><strong>Rotimi, B.I.</strong>, García-Jerez, A., Russell, J.B.</p><p class="pub-journal">ESS Open Archive</p></li>
+      <li class="pub-item reveal"><p class="pub-year">In Prep</p><p class="pub-title">Hierarchical Bayesian Engine for Joint Inversion of HVSR and Surface Wave Data for Multi-scale Crustal Imaging</p><p class="pub-authors"><strong>Rotimi, B.I.</strong>, Russell, J.B., García-Jerez, A., et al.</p><p class="pub-journal">JGR (in prep)</p></li>
     </ul>
-    <div class="reveal" style="margin-top:1.25rem;"><a href="/publications/" class="btn btn-ghost">All publications & talks →</a></div>
+    <div class="reveal" style="margin-top:1rem;"><a href="/publications/" class="btn btn-ghost">All publications & talks →</a></div>
   </section>
 
   <!-- Education -->
   <section id="education">
     <p class="section-label reveal">Education</p>
     <h2 class="section-title reveal">Education</h2>
-    <div class="card-grid" style="max-width:480px;">
-      <div class="card reveal"><p class="card-label">2023 – Present</p><h3>PhD, Geophysics & Seismology</h3><p>Syracuse University · Advisor: Dr. Joshua Russell · GPA: 3.78/4.0</p></div>
-      <div class="card reveal"><p class="card-label">2017 – 2021</p><h3>B.Sc., Applied Geophysics</h3><p>Adekunle Ajasin University, Nigeria · Best Graduating Student · GPA: 4.38/5.0</p></div>
+    <div class="card-grid" style="max-width:460px;">
+      <div class="card reveal"><p class="card-label">2023 – Present</p><h3>PhD, Geophysics & Seismology</h3><p>Syracuse University · Advisor: Dr. Joshua Russell · GPA 3.78</p></div>
+      <div class="card reveal"><p class="card-label">2017 – 2021</p><h3>B.Sc., Applied Geophysics</h3><p>Adekunle Ajasin University, Nigeria · Best Graduating Student · GPA 4.38/5.0</p></div>
     </div>
   </section>
 
   <!-- Contact -->
-  <div class="container">
+  <div class="wrap">
     <div class="contact-block reveal" id="contact">
       <p class="section-label">Reach out</p>
       <h2 class="section-title">Let's connect.</h2>
-      <p>Open to research collaborations, fieldwork opportunities, and conversations about inverse problems and geophysics.</p>
-      <p style="margin-top:1rem; font-family: var(--mono); font-size: .85rem; color: rgba(255,255,255,.7);">Birotimi [at] syr [dot] edu</p>
+      <p>Open to research collaborations, fieldwork, and conversations about inverse problems.</p>
+      <p style="margin-top:.8rem;font-family:var(--mono);font-size:.82rem;color:rgba(255,255,255,.7);">Birotimi [at] syr [dot] edu</p>
       <div class="contact-links">
         <a href="https://github.com/Birotimi1" class="contact-link">GitHub</a>
         <a href="https://orcid.org/0000-0003-2184-3077" class="contact-link">ORCID</a>
-        <a href="https://scholar.google.com/citations?user=LRlE1F8AAAAJ" class="contact-link">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user=LRlE1F8AAAAJ" class="contact-link">Scholar</a>
         <a href="https://www.linkedin.com/in/rotimi-babatunde-isaac-463b0b21a" class="contact-link">LinkedIn</a>
         <a href="https://jbrussell.github.io/" class="contact-link">Research Group</a>
       </div>
     </div>
   </div>
 
-  <!-- GitHub Activity -->
-  <section id="github" style="padding-bottom:1rem;">
-    <p class="section-label reveal">Open Source</p>
-    <h2 class="section-title reveal">GitHub Activity</h2>
-    <div class="reveal">
-      <div class="github-widget" data-username="Birotimi1"></div>
-    </div>
-    <div class="reveal" style="margin-top:1rem;">
-      <a href="https://github.com/Birotimi1" class="gh-contributions" data-gh-username="Birotimi1" target="_blank">Birotimi1's contributions</a>
-    </div>
+  <!-- GitHub -->
+  <section id="github" style="padding-top:0;">
+    <div class="reveal"><div class="github-widget" data-username="Birotimi1"></div></div>
   </section>
   <script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
-  <script src="https://ikuwow.github.io/yourcontributions/widget.min.js"></script>
 
   <footer>Babatunde Isaac Rotimi · Syracuse University · 2026</footer>
 
   <script>
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 60);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => observer.observe(el));
+    // Scroll reveal
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      obs.observe(el);
+    });
 
-    // Dark mode toggle
+    // Dark mode
     function toggleTheme() {
-      const html = document.documentElement;
-      const btn = document.querySelector('.theme-toggle');
-      if (html.getAttribute('data-theme') === 'dark') {
-        html.removeAttribute('data-theme');
-        btn.textContent = '☀️';
+      var d = document.documentElement;
+      var b = document.getElementById('theme-btn');
+      if (d.getAttribute('data-theme') === 'dark') {
+        d.removeAttribute('data-theme');
+        b.textContent = 'dark';
         localStorage.setItem('theme', 'light');
       } else {
-        html.setAttribute('data-theme', 'dark');
-        btn.textContent = '🌙';
+        d.setAttribute('data-theme', 'dark');
+        b.textContent = 'light';
         localStorage.setItem('theme', 'dark');
       }
     }
-    // Persist theme
+    // Load saved theme
     (function() {
-      const saved = localStorage.getItem('theme');
-      const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (saved === 'dark' || (!saved && prefers)) {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        document.querySelector('.theme-toggle').textContent = '🌙';
+        document.getElementById('theme-btn').textContent = 'light';
       }
     })();
   </script>
