@@ -25,6 +25,8 @@ section+section{padding-top:0}
 .hero-sidebar{flex-shrink:0;text-align:center;padding-top:.25rem}
 .hero-sidebar img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid var(--card-border)}
 .hero-sidebar p{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-top:.45rem;line-height:1.35}
+.sidebar-links{display:flex;flex-direction:column;align-items:center;gap:.35rem;margin-top:.75rem;font-family:var(--mono);font-size:.78rem}
+.sidebar-links a{color:var(--teal);transition:color .2s}.sidebar-links a:hover{color:var(--orange)}
 .hero h1{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.25rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;color:var(--heading);margin-bottom:.35rem}
 .hero-tagline{font-family:var(--mono);font-size:1.02rem;color:var(--orange);margin-bottom:1.25rem}
 .hero-bio{font-size:1.05rem;line-height:1.8;color:var(--slate);margin-bottom:1.25rem}
