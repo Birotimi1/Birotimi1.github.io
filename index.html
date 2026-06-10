@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --midnight: #1a1a2e;
+      --ink: #16213e;
+      --coral: #e94560;
+      --ocean: #0f3460;
+      --surface: #f8f7f4;
+      --paper: #ffffff;
+      --muted: #7b7b8e;
+      --border: #e2e1dd;
+      --display: 'Space Grotesk', system-ui, sans-serif;
+      --body: 'Inter', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--coral);
+      color: var(--paper);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(248, 247, 244, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav.scrolled { border-bottom-color: var(--border); }
+
+    .nav-logo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.125rem;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--coral); }
+
+    .nav-links { display: flex; gap: 2rem; }
+
+    .nav-links a {
+      font-family: var(--display);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 2rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.8125rem;
+      color: var(--coral);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.6s ease forwards 0.2s;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.75rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--midnight);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.7s ease forwards 0.35s;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 540px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.6s ease forwards 0.55s;
+    }
+
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.6s ease forwards 0.7s;
+    }
+
+    .btn {
+      font-family: var(--display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--midnight);
+      color: var(--paper);
+    }
+
+    .btn-primary:hover {
+      background: var(--ocean);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(15, 52, 96, 0.25);
+    }
+
+    .btn-ghost {
+      border: 1.5px solid var(--border);
+      color: var(--ink);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--ink);
+      transform: translateY(-1px);
+    }
+
+    /* ── Sections ── */
+    section {
+      padding: 6rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--coral);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--midnight);
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 500px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      transition: all 0.25s;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .project-card:hover {
+      border-color: var(--ocean);
+      box-shadow: 0 8px 32px rgba(26, 26, 46, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .project-name {
+      font-family: var(--display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.6875rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: 4px;
+      background: var(--surface);
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .project-arrow {
+      font-size: 1.25rem;
+      color: var(--border);
+      transition: all 0.2s;
+      margin-top: 0.25rem;
+    }
+
+    .project-card:hover .project-arrow {
+      color: var(--coral);
+      transform: translateX(3px);
+    }
+
+    /* ── About ── */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .skill-tag {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      padding: 0.375rem 0.875rem;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      color: var(--ink);
+      letter-spacing: 0.01em;
+      transition: all 0.2s;
+    }
+
+    .skill-tag:hover {
+      border-color: var(--coral);
+      color: var(--coral);
+    }
+
+    /* ── Contact ── */
+    .contact-block {
+      background: var(--midnight);
+      border-radius: 12px;
+      padding: 3.5rem;
+      color: var(--paper);
+      max-width: 900px;
+      margin: 0 auto 6rem;
+    }
+
+    .contact-block .section-label { color: rgba(233, 69, 96, 0.9); }
+    .contact-block .section-title { color: var(--paper); }
+
+    .contact-block .section-desc {
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 2rem;
+    }
+
+    .contact-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+    .contact-link {
+      font-family: var(--display);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 0.625rem 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--paper);
+      border-color: var(--coral);
+      background: rgba(233, 69, 96, 0.1);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (min-width: 640px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      .nav-links a { font-size: 0.8125rem; }
+      section { padding: 4rem 1.25rem; }
+      .project-card { padding: 1.5rem; grid-template-columns: 1fr; }
+      .project-arrow { display: none; }
+      .contact-block { padding: 2.5rem 1.5rem; margin-left: 1.25rem; margin-right: 1.25rem; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-eyebrow, .hero h1, .hero p, .hero-cta {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">your<span>.</span>name</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <p class="hero-eyebrow">Designer & Developer</p>
+    <h1>I build things<br>people enjoy using.</h1>
+    <p>
+      A full-stack developer with an eye for design. I craft web
+      experiences that are fast, accessible, and — most importantly —
+      pleasant to interact with.
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">See my work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section id="work">
+    <p class="section-label reveal">Selected work</p>
+    <h2 class="section-title reveal">Things I've built</h2>
+    <p class="section-desc reveal">
+      A mix of professional projects and side experiments.
+    </p>
+
+    <div class="projects-grid">
+
+      <a href="#" class="project-card reveal">
+        <div>
+          <h3 class="project-name">Project Alpha</h3>
+          <p class="project-desc">
+            A real-time dashboard for monitoring analytics across
+            distributed systems. Reduced mean-time-to-detect by 40%.
+          </p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">D3.js</span>
+            <span class="tag">WebSocket</span>
+          </div>
+        </div>
+        <span class="project-arrow">→</span>
+      </a>
+
+      <a href="#" class="project-card reveal">
+        <div>
+          <h3 class="project-name">Mosaic</h3>
+          <p class="project-desc">
+            A collaborative design tool that lets distributed teams
+            iterate on UI concepts in the browser — no installs needed.
+          </p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Canvas API</span>
+            <span class="tag">CRDT</span>
+          </div>
+        </div>
+        <span class="project-arrow">→</span>
+      </a>
+
+      <a href="#" class="project-card reveal">
+        <div>
+          <h3 class="project-name">Wavelength</h3>
+          <p class="project-desc">
+            An accessible music player built for keyboard-first users,
+            with visualizations driven by the Web Audio API.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Svelte</span>
+            <span class="tag">Web Audio</span>
+            <span class="tag">A11y</span>
+          </div>
+        </div>
+        <span class="project-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <p class="section-label reveal">About</p>
+    <h2 class="section-title reveal">A bit about me</h2>
+
+    <div class="about-content reveal">
+      <div class="about-text">
+        <p>
+          I'm a developer who started out tinkering with HTML in
+          middle school and never really stopped. I care about
+          performance, accessibility, and writing code that the
+          next person can actually read.
+        </p>
+        <p>
+          When I'm not at a keyboard, you'll find me hiking,
+          reading science fiction, or trying (and failing) to keep
+          houseplants alive.
+        </p>
+
+        <div class="skills-list">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div style="padding: 0 2rem;">
+    <div class="contact-block reveal" id="contact">
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-title">Let's work together.</h2>
+      <p class="section-desc">
+        Always open to interesting projects and conversations.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:you@example.com" class="contact-link">Email</a>
+        <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" class="contact-link">LinkedIn</a>
+        <a href="https://twitter.com/yourusername" class="contact-link">Twitter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Built with care · 2026
+  </footer>
+
+  <script>
+    // Scroll-triggered reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Nav border on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
