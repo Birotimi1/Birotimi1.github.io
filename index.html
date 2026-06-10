@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Isaac Rotimi — Seismology & Geophysics</title>
-  <meta name="description" content="Isaac Rotimi — PhD Student in Seismology at Syracuse University. Research in seismic imaging, ambient noise, and Earth structure.">
+  <meta name="description" content="Babatunde Isaac Rotimi — PhD Student in Geophysics & Seismology at Syracuse University. Inverse problems, uncertainty quantification, ambient noise tomography, and physics-informed learning.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -24,19 +24,22 @@
   </nav>
 
   <header class="hero">
-    <p class="hero-eyebrow">Seismology · Earth Structure · Imaging</p>
-    <h1>Imaging what lies<br>beneath the surface.</h1>
+    <p class="hero-eyebrow">Geophysics · Inverse Problems · Seismology</p>
+    <h1>Welcome — you have<br>gradient descended into<br>my local minima.</h1>
     <p class="hero-bio">
-      I'm Isaac Rotimi — a PhD student in the
+      I'm <strong>Isaac Rotimi</strong>, a third-year PhD student in the
       <a href="https://jbrussell.github.io/">Russell Seismology Group</a>
-      at <a href="https://thecollege.syr.edu/earth-sciences-department/">Syracuse University</a>,
-      Department of Earth &amp; Environmental Sciences. I use seismic waves
-      to image Earth's crust and upper mantle to understand tectonic
-      processes, subsurface structure, and mantle dynamics.
+      at <a href="https://thecollege.syr.edu/earth-sciences-department/">Syracuse University</a>.
+      My research lives at the intersection of geophysics and computational science —
+      I develop methods that fuse multiple geophysical data types and leverage
+      physics-informed machine learning to image Earth's subsurface with
+      better resolution and honest uncertainty.
     </p>
+
     <div class="hero-meta">
       <span>Syracuse University</span>
       <span>PhD Student, 2023–Present</span>
+      <a href="https://orcid.org/0000-0003-2184-3077">ORCID</a>
       <a href="https://github.com/Birotimi1">GitHub</a>
     </div>
     <div class="hero-cta">
@@ -45,105 +48,168 @@
     </div>
   </header>
 
-  <!-- Research Overview -->
-  <section id="research">
-    <p class="section-label reveal">Research</p>
-    <h2 class="section-title reveal">Research interests</h2>
+  <!-- Current Work -->
+  <section id="current">
+    <p class="section-label reveal">Current Focus</p>
+    <h2 class="section-title reveal">What I'm working on now</h2>
     <p class="section-desc reveal">
-      My research uses seismic observations to probe Earth's interior
-      structure and understand the physical processes that shape our planet.
+      My PhD work centers on solving inverse problems with rigorous
+      uncertainty quantification, fusing multimodal geophysical
+      datasets, and bridging classical inversion with modern
+      machine learning.
     </p>
 
     <div class="card-grid">
       <div class="card reveal">
-        <p class="card-label">Focus Area</p>
-        <h3>Seismic Imaging & Tomography</h3>
+        <p class="card-label">PhD Research</p>
+        <h3>Hierarchical Bayesian Inversion Engine</h3>
         <p>
-          Building models of Earth's subsurface using seismic wave
-          speeds to map geological structures, from shallow crustal
-          features to deep mantle heterogeneity.
+          Developing a novel hierarchical geophysical inversion framework
+          that jointly inverts HVSR, Rayleigh wave ellipticity, and
+          multimode surface-wave phase velocities for multi-scale crustal
+          imaging — from soft sediments of the Atlantic Coastal Plain down
+          through the lower Appalachians.
         </p>
         <div class="card-tags">
+          <span class="tag">Inverse Problems</span>
+          <span class="tag">Bayesian Methods</span>
+          <span class="tag">Multimodal Fusion</span>
+          <span class="tag">HVSR</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <p class="card-label">Stanford · Mineral-X</p>
+        <h3>Physics-Informed Neural Networks for Subsurface Imaging</h3>
+        <p>
+          Research affiliate with Mineral-X at Stanford University,
+          working on uncertainty quantification in subsurface imaging
+          via physics-informed neural networks coupled with variational
+          inference. Bridging data-driven and physics-based approaches.
+        </p>
+        <div class="card-tags">
+          <span class="tag">PINNs</span>
+          <span class="tag">Uncertainty Quantification</span>
+          <span class="tag">Variational Inference</span>
+          <span class="tag">PyTorch</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <p class="card-label">Ongoing</p>
+        <h3>Ambient Noise Tomography & Site Characterization</h3>
+        <p>
+          Characterizing near-surface shear-wave velocity structure of
+          sedimentary basins to understand basin architectures related
+          to continental breakup in the southeastern US. This improved
+          imaging of soft sediments also contributes to ground motion
+          modeling for seismic hazard assessment.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Ambient Noise</span>
           <span class="tag">Surface Waves</span>
-          <span class="tag">Body Waves</span>
-          <span class="tag">Tomography</span>
+          <span class="tag">Site Characterization</span>
+          <span class="tag">DAS/Nodal</span>
         </div>
       </div>
-
-      <div class="card reveal">
-        <p class="card-label">Focus Area</p>
-        <h3>Ambient Noise Seismology</h3>
-        <p>
-          Extracting useful seismic signals from background noise
-          generated by ocean waves and other sources to image
-          structure where earthquake data is sparse.
-        </p>
-        <div class="card-tags">
-          <span class="tag">Noise Correlations</span>
-          <span class="tag">Green's Functions</span>
-          <span class="tag">Phase Velocities</span>
-        </div>
-      </div>
-
-      <div class="card reveal">
-        <p class="card-label">Focus Area</p>
-        <h3>Earth Structure & Dynamics</h3>
-        <p>
-          Investigating the structure and evolution of the lithosphere
-          and asthenosphere to understand mantle flow, tectonic
-          deformation, and the role of melt and volatiles.
-        </p>
-        <div class="card-tags">
-          <span class="tag">Mantle Dynamics</span>
-          <span class="tag">Lithosphere</span>
-          <span class="tag">Anisotropy</span>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top: 2rem;" class="reveal">
-      <a href="/research/" class="btn btn-ghost">More about my research →</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <p class="section-label reveal">About</p>
-    <h2 class="section-title reveal">Background</h2>
+  <!-- Background -->
+  <section id="background">
+    <p class="section-label reveal">Background</p>
+    <h2 class="section-title reveal">Where I've been</h2>
 
-    <div class="reveal" style="max-width: 620px;">
+    <div class="reveal" style="max-width: 640px;">
       <p style="margin-bottom: 1rem;">
-        I'm a member of the
-        <a href="https://jbrussell.github.io/">Russell Seismology Group</a>
-        at Syracuse University, where I work under the supervision of
-        <a href="https://jbrussell.github.io/">Prof. Joshua Russell</a>.
-        Our group focuses on using seismic waves to image Earth's crust
-        and upper mantle to understand tectonic processes.
+        Before Syracuse, I earned my B.Sc. in Applied Geophysics from
+        Adekunle Ajasin University in Nigeria, where my thesis focused
+        on seismic interpretation of 2D lines from deepwater Niger Delta.
+        I then worked as a subsurface G&amp;G intern at Danvic Petroleum
+        in Lagos, conducting hydrocarbon evaluation through seismic
+        interpretation and attribute analysis.
       </p>
       <p style="margin-bottom: 1rem;">
-        My work sits at the intersection of geophysics, signal processing,
-        and computational science. I enjoy the full cycle of seismological
-        research — from acquiring and processing seismic data to building
-        models that reveal new insights about Earth's interior.
+        At Syracuse, I've worked across multiple projects — from 3D
+        seismic interpretation of the Rockall Trough for hydrocarbon
+        prospectivity and carbon sequestration under Dr. Christopher Scholz,
+        to my current work developing hierarchical inversion methods with
+        Dr. Joshua Russell. I've also completed field training with
+        EarthScope at New Mexico Tech and broadband seismometer deployment
+        at the LIGO Hanford site.
+      </p>
+      <p style="margin-bottom: 1rem;">
+        I'm a Fellow of the Geological Society of London and a member of
+        AGU, SEG, AAPG, and NAPE. I also serve as a journal referee for
+        SEG, Earth and Space Science, and G-Cubed.
       </p>
     </div>
 
     <div class="skills-grid reveal">
       <div class="skill-group">
         <h4>Methods</h4>
-        <p>Seismic tomography, ambient noise, surface-wave analysis, receiver functions</p>
+        <p>Bayesian inversion, ambient noise HVSR, surface-wave tomography, seismic interpretation, DAS/nodal arrays</p>
       </div>
       <div class="skill-group">
-        <h4>Tools</h4>
-        <p>Python, MATLAB, ObsPy, SAC, GMT, QGIS</p>
+        <h4>Languages & Tools</h4>
+        <p>Python, MATLAB, R, PyTorch, Scikit-Learn, ObsPy, OpendTect, GMT, Git, HPC</p>
       </div>
       <div class="skill-group">
-        <h4>Computation</h4>
-        <p>Signal processing, inverse theory, numerical modeling, data visualization</p>
+        <h4>Frameworks</h4>
+        <p>Pandas, NumPy, GeoPandas, Matplotlib, Jupyter, PyCharm, VS Code</p>
       </div>
       <div class="skill-group">
-        <h4>Interests</h4>
-        <p>Mantle dynamics, lithospheric structure, seismic anisotropy, ocean-bottom seismology</p>
+        <h4>Focus Areas</h4>
+        <p>Inverse problems, uncertainty quantification, physics-informed ML, multimodal data fusion</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Publications -->
+  <section id="pubs">
+    <p class="section-label reveal">Publications</p>
+    <h2 class="section-title reveal">Selected work</h2>
+    <p class="section-desc reveal">
+      Full list on the <a href="/publications/">publications page</a>.
+    </p>
+
+    <ul class="pub-list">
+      <li class="pub-item reveal">
+        <p class="pub-year">In Prep</p>
+        <p class="pub-title">Hierarchical Bayesian Engine for Joint Inversion of HVSR and Surface Wave Data for Multi-scale Crustal Imaging of the Lower Appalachians & Atlantic Coastal Plain Sediments</p>
+        <p class="pub-authors"><strong>Rotimi, B.I.</strong>, Russell, J.B., García-Jerez, A., Pratt, T., Fischer, K., Lin, F., Eilon, Z.</p>
+        <p class="pub-journal">Journal of Geophysical Research (in prep)</p>
+      </li>
+      <li class="pub-item reveal">
+        <p class="pub-year">In Prep</p>
+        <p class="pub-title">Shear-Wave Velocity Characterization of the Atlantic Coastal Plain Sediments via HVSR Inversion and Ambient Noise Dispersion</p>
+        <p class="pub-authors"><strong>Rotimi, B.I.</strong>, Russell, J.B., García-Jerez, A.</p>
+        <p class="pub-journal">Journal of Geophysical Research (in prep)</p>
+      </li>
+    </ul>
+
+    <div class="reveal" style="margin-top: 1.5rem;">
+      <a href="/publications/" class="btn btn-ghost">All publications & talks →</a>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <p class="section-label reveal">Education</p>
+    <h2 class="section-title reveal">Education</h2>
+
+    <div class="card-grid" style="max-width: 500px;">
+      <div class="card reveal">
+        <p class="card-label">2023 – Present</p>
+        <h3>PhD, Geophysics & Seismology</h3>
+        <p>Syracuse University, New York<br>
+        Advisor: Dr. Joshua Russell · GPA: 3.78/4.0</p>
+      </div>
+      <div class="card reveal">
+        <p class="card-label">2017 – 2021</p>
+        <h3>B.Sc., Applied Geophysics</h3>
+        <p>Adekunle Ajasin University, Nigeria<br>
+        Best Graduating Student · GPA: 4.38/5.0</p>
       </div>
     </div>
   </section>
@@ -153,17 +219,18 @@
     <div class="contact-block reveal" id="contact">
       <p class="section-label">Contact</p>
       <h2 class="section-title">Let's connect.</h2>
-      <p>Open to research collaborations and conversations about seismology.</p>
+      <p>Open to research collaborations, fieldwork opportunities, and conversations about inverse problems and geophysics.</p>
       <div class="contact-links">
-        <a href="mailto:birotimi@syr.edu" class="contact-link">Email</a>
+        <a href="mailto:rotimibabatundeisaac@gmail.com" class="contact-link">Email</a>
         <a href="https://github.com/Birotimi1" class="contact-link">GitHub</a>
+        <a href="https://orcid.org/0000-0003-2184-3077" class="contact-link">ORCID</a>
         <a href="https://jbrussell.github.io/" class="contact-link">Research Group</a>
       </div>
     </div>
   </div>
 
   <footer>
-    Isaac Rotimi · Syracuse University · 2026
+    Babatunde Isaac Rotimi · Syracuse University · 2026
   </footer>
 
   <script>
