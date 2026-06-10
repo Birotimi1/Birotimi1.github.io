@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Isaac Rotimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Isaac Rotimi<span>.</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/research/">Research</a>
+      <a href="/publications/" class="active">Publications</a>
+      <a href="/code/">Code</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <p class="section-label">Publications</p>
+    <h1>Publications</h1>
+    <p>
+      Peer-reviewed articles, conference presentations, and other
+      scholarly contributions.
+    </p>
+  </div>
+
+  <section>
+    <!-- Instructions for adding publications -->
+    <p style="color: var(--muted); font-style: italic; margin-bottom: 2rem; font-size: 0.95rem;">
+      Publications will be listed here as they become available.
+      Check back soon, or see my
+      <a href="https://scholar.google.com/">Google Scholar</a> profile.
+    </p>
+
+    <ul class="pub-list">
+
+      <!-- TEMPLATE: Copy this block and fill in your details
+      <li class="pub-item reveal">
+        <p class="pub-year">2026</p>
+        <p class="pub-title">Title of Your Paper</p>
+        <p class="pub-authors">
+          <strong>Rotimi, B.I.</strong>, Russell, J.B., Coauthor, A.
+        </p>
+        <p class="pub-journal">Journal Name, Volume, Pages</p>
+        <div class="pub-links">
+          <a href="#">DOI</a>
+          <a href="#">PDF</a>
+        </div>
+      </li>
+      -->
+
+      <li class="pub-item reveal">
+        <p class="pub-year">In Progress</p>
+        <p class="pub-title">Research manuscripts in preparation</p>
+        <p class="pub-authors">
+          <strong>Rotimi, B.I.</strong>, Russell, J.B., et al.
+        </p>
+        <p class="pub-journal">Details to follow</p>
+      </li>
+
+    </ul>
+
+    <h3 class="section-title reveal" style="margin-top: 3rem;">Conference Presentations</h3>
+    <p class="section-desc reveal">
+      Talks and posters presented at scientific meetings.
+    </p>
+
+    <ul class="pub-list">
+
+      <!-- TEMPLATE: Copy this block for conference presentations
+      <li class="pub-item reveal">
+        <p class="pub-year">2025</p>
+        <p class="pub-title">Title of Your Presentation</p>
+        <p class="pub-authors">
+          <strong>Rotimi, B.I.</strong>, Russell, J.B.
+        </p>
+        <p class="pub-journal">AGU Fall Meeting, San Francisco, CA. [Poster/Talk]</p>
+      </li>
+      -->
+
+      <li class="pub-item reveal">
+        <p class="pub-year">—</p>
+        <p class="pub-title">Conference presentations will be listed here</p>
+        <p class="pub-authors">Check back for updates</p>
+      </li>
+
+    </ul>
+  </section>
+
+  <footer>
+    <a href="/">Isaac Rotimi</a> · Syracuse University · 2026
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
