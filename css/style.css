@@ -20,14 +20,14 @@ section+section{padding-top:0}
 .section-title{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;letter-spacing:-.025em;color:var(--heading);margin-bottom:.7rem}
 .section-desc{color:var(--slate);max-width:580px;margin-bottom:1.5rem;font-size:1.03rem}
 .hero{padding:6.5rem 2rem 2rem;max-width:840px;margin:0 auto}
-.hero-intro{display:flex;gap:2.5rem;align-items:flex-start}
+.hero-intro{display:flex;gap:1.5rem;align-items:flex-start}
 .hero-content{flex:1;min-width:0}
-.hero-sidebar{flex-shrink:0;text-align:center;padding-top:.25rem}
-.hero-sidebar img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid var(--card-border)}
+.hero-sidebar{flex-shrink:0;text-align:center;padding-top:.25rem;max-width:160px}
+.hero-sidebar img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--card-border)}
 .hero-sidebar p{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-top:.45rem;line-height:1.35}
-.sidebar-links{display:flex;flex-direction:column;align-items:center;gap:.35rem;margin-top:.75rem;font-family:var(--mono);font-size:.78rem}
+.sidebar-links{display:flex;flex-direction:column;align-items:center;gap:.25rem;margin-top:.6rem;font-family:var(--mono);font-size:.72rem}
 .sidebar-links a{color:var(--teal);transition:color .2s}.sidebar-links a:hover{color:var(--orange)}
-.hero h1{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.25rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;color:var(--heading);margin-bottom:.35rem}
+.hero h1{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;color:var(--heading);margin-bottom:.3rem}
 .hero-tagline{font-family:var(--mono);font-size:1.02rem;color:var(--orange);margin-bottom:1.25rem}
 .hero-bio{font-size:1.05rem;line-height:1.8;color:var(--slate);margin-bottom:1.25rem}
 .hero-bio strong{color:var(--heading)}.hero-bio a{color:var(--teal)}
@@ -82,7 +82,7 @@ footer{text-align:center;padding:1.25rem;font-family:var(--mono);font-size:.78re
   nav{padding:.75rem 1rem}.nav-links{gap:.7rem}.nav-links a{font-size:.82rem}
   .hero{padding:5rem 1rem 1.5rem}
   .hero-intro{flex-direction:column-reverse;align-items:center;text-align:center;gap:1rem}
-  .hero-sidebar img{width:140px;height:140px}
+  .hero-sidebar img{width:120px;height:120px}
   .hero-links,.hero-btns{justify-content:center}
   section,.page-header{padding-left:1rem;padding-right:1rem}
   .contact-block{margin-left:1rem;margin-right:1rem;padding:1.5rem 1.1rem}
