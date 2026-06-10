@@ -19,7 +19,7 @@
   <nav>
     <div class="nav-left">
       <a href="/" class="nav-logo">B.I. Rotimi<span>.</span></a>
-      <button id="theme-btn" onclick="toggleTheme()">dark</button>
+      <button id="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
     </div>
     <div class="nav-links">
       <a href="/" class="active">Home</a>
@@ -206,11 +206,11 @@
       var b = document.getElementById('theme-btn');
       if (d.getAttribute('data-theme') === 'dark') {
         d.removeAttribute('data-theme');
-        b.textContent = 'dark';
+        b.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('theme', 'light');
       } else {
         d.setAttribute('data-theme', 'dark');
-        b.textContent = 'light';
+        b.innerHTML = '<i class="fas fa-sun"></i>';
         localStorage.setItem('theme', 'dark');
       }
     }
@@ -220,7 +220,7 @@
       var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (saved === 'dark' || (!saved && prefersDark)) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        document.getElementById('theme-btn').textContent = 'light';
+        document.getElementById('theme-btn').innerHTML = '<i class="fas fa-sun"></i>';
       }
     })();
   </script>
