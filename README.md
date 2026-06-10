@@ -36,14 +36,7 @@ Your site will be live at `https://yourusername.github.io` within a few minutes.
 
 ## Customizing
 
-Open `index.html` and update:
-
-- **Your name** — the nav logo and page title
-- **Hero text** — your headline and description
-- **Projects** — replace the placeholder cards with your real work
-- **About** — your bio and skill tags
-- **Contact links** — your actual email, GitHub, LinkedIn, etc.
-
+Op
 ## Connecting Claude
 
 To let Claude push changes directly to this repo, connect the **GitHub connector** in Claude.ai:
