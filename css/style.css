@@ -100,6 +100,7 @@ footer{text-align:center;padding:1.25rem;font-family:var(--mono);font-size:.78re
   .contact-links{justify-content:center}
   .tool-grid,.skills-grid{grid-template-columns:1fr}
   .news-item{flex-direction:column;gap:.1rem}
+  #news .section-label{font-size:2.5rem;font-weight:bold}
   .card{padding:1.1rem}
   .pub-title{font-size:.85rem}
 }
