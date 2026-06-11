@@ -1,13 +1,104 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Research — Babatunde Isaac Rotimi</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/style.css"></head><body>
-  <nav><div class="nav-left"><a href="/" class="nav-logo">B.I. Rotimi<span>.</span></a><button id="theme-btn" onclick="toggleTheme()">dark</button></div><div class="nav-links"><a href="/">Home</a><a href="/research/" class="active">Research</a><a href="/publications/">Publications</a><a href="/code/">Code</a><a href="/teaching/">Teaching</a><a href="/files/Babatunde%20Rotimi%20Resume_.pdf">CV</a><a href="/contact/">Contact</a></div></nav>
-  <div class="page-header"><p class="section-label">Research</p><h1>Research</h1><p>I use seismic waves to probe Earth's interior and understand the physical processes that shape our planet.</p></div>
-  <section><div class="card-grid">
-    <div class="card reveal"><p class="card-label">Seismic Imaging</p><h3>Seismic Tomography & Subsurface Characterization</h3><p>Developing and applying tomographic methods to map variations in seismic wave speed, revealing differences in temperature, composition, and melt/fluids. Includes regional-scale upper mantle studies and near-surface characterization.</p><div class="card-tags"><span class="tag">Tomography</span><span class="tag">Inverse Theory</span><span class="tag">Velocity Models</span></div></div>
-    <div class="card reveal"><p class="card-label">Ambient Noise</p><h3>Ambient Noise Seismology</h3><p>Cross-correlating continuous seismic records to extract signals equivalent to earthquake data — even in regions with little seismicity. Powerful tools for imaging structure at scales inaccessible with traditional approaches.</p><div class="card-tags"><span class="tag">Noise Correlations</span><span class="tag">Green's Functions</span><span class="tag">Surface Waves</span><span class="tag">Phase Velocity</span></div></div>
-    <div class="card reveal"><p class="card-label">Earth Structure</p><h3>Lithosphere–Asthenosphere System</h3><p>How seismic observations — wave speed, anisotropy, attenuation — constrain the rheological state of the upper mantle. Implications for mantle flow, plate evolution, and the role of volatiles and partial melt.</p><div class="card-tags"><span class="tag">Mantle Dynamics</span><span class="tag">Anisotropy</span><span class="tag">Attenuation</span></div></div>
-    <div class="card reveal"><p class="card-label">Machine Learning</p><h3>Physics-Informed Hybrid Learning</h3><p>Bridging classical geophysical inversion with modern machine learning. Uncertainty quantification via physics-informed neural networks coupled with variational inference, in collaboration with Mineral-X at Stanford (Dr. Peng Li).</p><div class="card-tags"><span class="tag">PINNs</span><span class="tag">UQ</span><span class="tag">Variational Inference</span><span class="tag">PyTorch</span></div></div>
-    <div class="card reveal"><p class="card-label">Potential Fields</p><h3>Gravity & Magnetic Methods</h3><p>Gravity and magnetic surveys provide complementary constraints — delineating basin geometry, mapping geological contacts, and estimating sediment thickness where seismic data is limited.</p><div class="card-tags"><span class="tag">Gravity</span><span class="tag">Magnetics</span><span class="tag">Forward Modeling</span></div></div>
-  </div></section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Babatunde Isaac Rotimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="/" class="nav-logo">B.I. Rotimi<span>.</span></a>
+      <button id="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/research/" class="active">Research</a>
+      <a href="/publications/">Publications</a>
+      <a href="/code/">Code</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/files/Babatunde%20Rotimi%20Resume_.pdf">CV</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Research</h1>
+    <p>I use seismic waves to image Earth's shallow and deep structure, with a focus on sedimentary basins, crustal architecture, and their implications for seismic hazard. My work combines ambient noise seismology, Bayesian inversion methods, and multi-observable geophysical datasets to build high-resolution velocity models of the subsurface. We are also affiliated with the <a href="https://gravitationalwaves.syracuse.edu/">Syracuse University Center for Gravitational Wave Astronomy and Astrophysics</a> where we are actively working on near-surface imaging for site selection for the next-generation gravitational-wave observatory <a href="https://cosmicexplorer.org/">Cosmic Explorer</a>.</p>
+  </div>
+
+  <section>
+    <div class="card-grid">
+
+      <div class="card reveal">
+        <h3>Hierarchical Bayesian Joint Inversion</h3>
+        <p>My primary research develops a Hierarchical Bayesian Inversion framework for recovering 1D shear-wave velocity structure by jointly inverting multiple seismic observables: HVSR, Rayleigh wave ellipticity, phase velocity dispersion, and group velocity dispersion. The method uses Markov chain Monte Carlo sampling with hierarchical noise estimation, where each data type's uncertainty is treated as partially unknown and solved for during the inversion. This provides rigorous uncertainty quantification and reveals how much the data actually constrain the velocity model at each depth.</p>
+        <div class="card-tags"><span class="tag">Bayesian Inference</span><span class="tag">Joint Inversion</span><span class="tag">Uncertainty Quantification</span><span class="tag">Shear-Wave Velocity</span></div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Sedimentary Basin Structure and Seismic Hazard</h3>
+        <p>Sedimentary basins amplify and prolong ground shaking during earthquakes, making their geometry and velocity structure critical inputs for seismic hazard assessment. My research targets the Atlantic Coastal Plain, where Cretaceous-to-Quaternary sediments overlie crystalline basement across Georgia and South Carolina — a region home to millions of people and the site of the damaging 1886 Charleston earthquake. I map sediment thickness, basement depth, and the Moho across multiple deployment lines spanning the Coastal Plain and Charleston seismic zone, constraining how sediment properties vary spatially and influence site amplification.</p>
+        <div class="card-tags"><span class="tag">Atlantic Coastal Plain</span><span class="tag">Charleston Seismic Zone</span><span class="tag">Site Response</span><span class="tag">Sediment Thickness</span><span class="tag">Vs30</span></div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Ambient Noise Seismology</h3>
+        <p>I extract surface wave dispersion measurements and spectral ratios from continuous seismic records using ambient noise cross-correlation techniques. This approach enables high-resolution imaging in regions with low natural seismicity. My work spans the full processing pipeline — from raw waveform data through frequency-time analysis, ray-path tomography, and construction of dispersion curves and ellipticity measurements that feed into the joint inversion.</p>
+        <div class="card-tags"><span class="tag">Cross-Correlations</span><span class="tag">Surface Waves</span><span class="tag">Phase Velocity</span><span class="tag">Group Velocity</span><span class="tag">HVSR</span></div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Crustal and Upper Mantle Imaging</h3>
+        <p>The joint inversion framework recovers velocity structure from the near-surface through the crust and into the upper mantle. By combining short-period observables sensitive to shallow sediments with longer-period surface wave dispersion that senses deeper structure, the method resolves features across a wide depth range in a single consistent inversion. Key targets include the sediment-basement contact, mid-crustal velocity gradients, and the Moho transition, providing constraints on crustal thickness variations across the passive margin.</p>
+        <div class="card-tags"><span class="tag">Moho Depth</span><span class="tag">Crustal Structure</span><span class="tag">Upper Mantle</span><span class="tag">Multi-Scale Imaging</span></div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Geothermal Resource Characterization</h3>
+        <p>I apply ambient noise methods to characterize subsurface structure in geothermal settings, where seismic velocity variations reflect temperature, fluid content, and rock properties relevant to resource assessment. This work involves processing dense array data to image shallow velocity heterogeneity and identify structural features associated with geothermal reservoirs.</p>
+        <div class="card-tags"><span class="tag">Ambient Noise Tomography</span><span class="tag">Geothermal Exploration</span><span class="tag">Subsurface Characterization</span></div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Computational Methods and High-Performance Computing</h3>
+        <p>My research relies on large-scale Bayesian computation, running hundreds of parallel sampling chains across broadband arrays. I develop modular inversion codes that incorporate simulated annealing, delayed rejection, hierarchical noise modeling, correlated error structures, and automated convergence diagnostics. I am also exploring physics-informed machine learning approaches for accelerating forward modeling and inverse problems in seismology.</p>
+        <div class="card-tags"><span class="tag">HPC</span><span class="tag">Bayesian Computation</span><span class="tag">Forward Modeling</span><span class="tag">Machine Learning</span><span class="tag">Inverse Theory</span></div>
+      </div>
+
+    </div>
+  </section>
+
   <footer><a href="/">Babatunde Isaac Rotimi</a> · Syracuse University · 2026</footer>
-  <script>const reveals=document.querySelectorAll(".reveal");const observer=new IntersectionObserver(e=>{e.forEach((e,t)=>{e.isIntersecting&&(setTimeout(()=>e.target.classList.add("visible"),60*t),observer.unobserve(e.target))})},{threshold:.12});reveals.forEach(e=>observer.observe(e));function toggleTheme(){const h=document.documentElement,b=document.getElementById("theme-btn");h.getAttribute("data-theme")==="dark"?(h.removeAttribute("data-theme"),b.textContent='dark',localStorage.setItem("theme","light")):(h.setAttribute("data-theme","dark"),b.textContent='light',localStorage.setItem("theme","dark"))}(function(){const s=localStorage.getItem("theme"),p=window.matchMedia("(prefers-color-scheme:dark)").matches;if(s==="dark"||(!s&&p)){document.documentElement.setAttribute("data-theme","dark");document.getElementById("theme-btn").textContent="🌙"}})();</script>
-</body></html>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1 });
+      obs.observe(el);
+    });
+    function toggleTheme() {
+      var d = document.documentElement, b = document.getElementById('theme-btn');
+      if (d.getAttribute('data-theme') === 'dark') {
+        d.removeAttribute('data-theme'); b.innerHTML = '<i class="fas fa-moon"></i>'; localStorage.setItem('theme', 'light');
+      } else {
+        d.setAttribute('data-theme', 'dark'); b.innerHTML = '<i class="fas fa-sun"></i>'; localStorage.setItem('theme', 'dark');
+      }
+    }
+    (function() {
+      var s = localStorage.getItem('theme'), p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (s === 'dark' || (!s && p)) { document.documentElement.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerHTML = '<i class="fas fa-sun"></i>'; }
+    })();
+  </script>
+</body>
+</html>
